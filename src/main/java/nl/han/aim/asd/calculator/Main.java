@@ -1,5 +1,6 @@
 package nl.han.aim.asd.calculator;
 
+import nl.han.aim.asd.expression.Expression;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -14,6 +15,26 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args){
+        //        //handmatige testing van de AST's
+//        Expression e1 = new Expression();
+//        Expression e2 = new Expression();
+//        Expression e3 = new Expression();
+//        Expression e4 = new Expression();
+//        Expression e5 = new Expression();
+//
+//        e1.setContent("+");
+//        e2.setContent("2");
+//        e3.setContent("*");
+//        e1.setLeft(e2);
+//        e1.setRight(e3);
+//
+//        e4.setContent("3");
+//        e5.setContent("4");
+//        e3.setLeft(e4);
+//        e3.setRight(e5);
+//
+//        System.out.println(e1);
+
         // Read expression from user
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter an expression: ");
@@ -37,7 +58,7 @@ public class Main {
         System.out.println("Input: " + expressionString);
 
         // TODO 4.3 1a -- Maak AST-classes in de expression package.
-//        System.out.println("AST: " + reader.getTopExpression());
+        System.out.println("AST: " + reader.getTopExpression());
 
         // TODO 4.3 2 -- Implementeer een Evaluator klasse met een
         //  methode double eval(Expression ast) die de sommen uitrekent.
